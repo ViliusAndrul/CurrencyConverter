@@ -16,12 +16,11 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class CurrencyScraping {
-	public static void main(String[] args) throws Exception {
+	public static void updateCurrencyData() throws Exception {
 		
 		final String url = "https://www.xe.com/currencytables/?from=USD";
-		String fileLocation = "C:\\Users\\Vilius\\eclipse-workspace\\currencyConverter\\currencyData";
 		
-        if(wasNotEditedWithinLast24Hours(fileLocation)) {
+        if(wasNotEditedWithinLast24Hours("./currencyData.json")) {
         
         	try {
         		JSONObject currencyObj = new JSONObject();
@@ -38,19 +37,16 @@ public class CurrencyScraping {
         			for(Element td : tr.select("td")) {	
         				if(i % 3 == 1){
         					extractedTextName = td.text().trim();
-        					//System.out.println("name in if " + extractedTextName);
         				}
         				if(i % 3 == 2) {
         					extractedTextValue = td.text().trim();
-        					//System.out.println("value in if " + extractedTextValue);
         					currencyObj.put(extractedTextName, extractedTextValue);
         				}
         				i = i + 1;
         			}
-        			//System.out.println("outside loop " + extractedTextName + " " + extractedTextValue);
 				
         		}
-        		try (FileWriter fw = new FileWriter(new File(fileLocation), StandardCharsets.UTF_8);
+        		try (FileWriter fw = new FileWriter(new File("./currencyData.json"), StandardCharsets.UTF_8);
         	             BufferedWriter writer = new BufferedWriter(fw)) {
 
         	            writer.write(currencyObj.toJSONString());

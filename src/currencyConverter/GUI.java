@@ -37,7 +37,7 @@ public class GUI {
 		JPanel mainPanel = new JPanel();
 		mainPanel.setLayout(new BorderLayout());
 		
-File file = new File("C:\\Users\\Vilius\\eclipse-workspace\\currencyConverter\\currencyData");
+File file = new File("./currencyData.json");
 		
         ObjectMapper objectMapper = new ObjectMapper();
 
@@ -110,11 +110,11 @@ File file = new File("C:\\Users\\Vilius\\eclipse-workspace\\currencyConverter\\c
 
 	public static void main(String[] args) throws Exception {
 		
-		CurrencyScraping.main(args);
+		CurrencyScraping.updateCurrencyData();
 		
 		new GUI();
 	}
 }
 
 
-//git(command line), clean up(clean code, check up on calculation), exe, github, leetcode, change comment color
+//git(command line)+, clean up(clean code, check up on calculation), exe, github, leetcode, change comment color
