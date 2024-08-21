@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 import java.util.Set;
 
 import javax.swing.JButton;
@@ -117,4 +116,4 @@ File file = new File("./currencyData.json");
 }
 
 
-//git(command line)+, clean up(clean code, check up on calculation), exe, github, leetcode, change comment color
+//clean up(clean code, check up on calculation), exe, github, leetcode, change comment color
