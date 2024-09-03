@@ -3,12 +3,12 @@
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
   <jar>C:\Users\Vilius\eclipse-workspace\currencyConverter\CurrencyConverter.jar</jar>
-  <outfile>CurrencyConverter.exe</outfile>
-  <errTitle></errTitle>
+  <outfile>C:\Users\Vilius\eclipse-workspace\currencyConverter\CurrencyConverter.exe</outfile>
+  <errTitle>Java version is outdated</errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
   <priority>normal</priority>
-  <downloadUrl></downloadUrl>
+  <downloadUrl>https://www.oracle.com/java/technologies/downloads/</downloadUrl>
   <supportUrl></supportUrl>
   <stayAlive>false</stayAlive>
   <restartOnCrash>false</restartOnCrash>
@@ -16,9 +16,9 @@
   <icon>C:\Users\Vilius\Desktop\favicon.ico</icon>
   <jre>
     <path>%JAVA_HOME%;%PATH%</path>
-    <requiresJdk>false</requiresJdk>
+    <requiresJdk>true</requiresJdk>
     <requires64Bit>false</requires64Bit>
-    <minVersion></minVersion>
-    <maxVersion></maxVersion>
+    <minVersion>13.0.2</minVersion>
+    <maxVersion>22.0.2</maxVersion>
   </jre>
 </launch4jConfig>
