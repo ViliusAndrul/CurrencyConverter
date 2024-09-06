@@ -59,6 +59,3 @@ buildNumber.properties
 
 #launch4j
 Launch4jConfig.xml
-
-#runnable jar file
-CurrencyConverter.jar
